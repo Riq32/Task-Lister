@@ -1,0 +1,109 @@
+*{box-sizing:border-box}
+
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color:#336699;
+}
+
+.page-wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2.25rem;
+}
+
+.container{
+  width:100%;
+  max-width:900px;
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:1.6rem;
+  box-shadow:0 10px 30px rgba(2,6,23,0.35);
+}
+
+.header h1{margin:0;font-size:2rem;color:var(--blue-600)}
+.subtitle{margin:0.25rem 0 1rem 0;color:var(--muted)}
+
+.task-form .row{
+display:flex;
+gap:0.6rem;
+flex-wrap:wrap;
+margin-bottom:0.6rem
+}
+
+.task-form input[type='text'],
+.task-form input[type='date'],
+.task-form input[type='number']{
+  flex:1 1 180px;
+  padding:0.6rem 0.75rem;
+  font-size:1.05rem;
+  border:1px solid #e6eefc;
+  border-radius:8px;
+}
+
+.actions-row{
+justify-content:flex-end
+}
+
+.btn-primary{
+  background:var(--blue-400);
+  color:white;
+  border:none;
+  padding:0.6rem 1rem;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:1rem;
+}
+
+.search-area{display:flex;
+gap:0.6rem;
+align-items:center;
+margin:0.75rem 0
+}
+
+.search-area input[type='search']{
+  flex:1;padding:0.55rem;border-radius:8px;border:1px solid #e6eefc;font-size:1rem
+}
+.search-area select{padding:0.55rem;border-radius:8px;border:1px solid #e6eefc}
+
+.tasks-section h2{margin:0 0 0.5rem 0;color:var(--muted)}
+
+.tasks-list{list-style:decimal; padding-left:1.25rem; margin:0}
+
+.tasks-list li{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+  background:#f8fafc;
+  padding:0.8rem;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.03);
+  margin-bottom:0.6rem;
+}
+
+.task-left{display:flex;align-items:center;gap:0.75rem;flex:1}
+
+.task-text{font-size:1.05rem}
+.task-meta{display:block;font-size:0.85rem;color:var(--muted);margin-top:0.2rem}
+
+.completed .task-text{ text-decoration: line-through; opacity:0.7 }
+
+.delete-btn{
+  margin-left:0.6rem; /* spacing between remove button and task */
+  border:1px solid rgba(239,68,68,0.12);
+  background:transparent;
+  color:var(--danger);
+  padding:0.45rem 0.6rem;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600
+}
+
+.checkbox{
+  width:18px;height:18px;border-radius:4px;cursor:pointer
+}
+

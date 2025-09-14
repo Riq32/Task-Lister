@@ -1,11 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task-Lister</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Lister Pro</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  
+  <main class="page-wrap">
+    <div class="container">
+      <header class="header">
+        <h1>Task Lister Pro</h1>
+        <p class="subtitle">Add tasks, assign people, set dates and times — search & filter easily.</p>
+      </header>
+
+      <form id="create-task-form" action="#" method="POST" class="task-form">
+        <div class="row">
+          <input type="text" id="new-task-description" name="new-task-description" placeholder="Task description" autocomplete="off" required />
+          <input type="date" id="task-date" name="task-date" />
+          <input type="text" id="task-person" name="task-person" placeholder="Person responsible" />
+          <input type="number" id="task-time" name="task-time" placeholder="Est. time (mins)" min="0" />
+        </div>
+
+        <div class="row actions-row">
+          <input type="submit" value="Create New Task" class="btn-primary" />
+        </div>
+      </form>
+
+      <section class="search-area">
+        <input type="search" id="search-input" placeholder="Search tasks..." />
+        <select id="filter-select" aria-label="Filter tasks">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </section>
+
+      <section class="tasks-section">
+        <h2>Your tasks</h2>
+        <ol id="tasks-list" class="tasks-list" aria-live="polite"></ol>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
